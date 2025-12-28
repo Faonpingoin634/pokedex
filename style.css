@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  @import url(https://fonts.google.com/specimen/Lato?preview.text=Bulbasaur);
+  font-family: "Lato", sans-serif;
+}
+
+.pokelist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.pokelist article {
+  position: relative;
+}
+
+.pokelist img {
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  right: 0.25rem;
+  z-index: 2;
+}
+
+.pokelist > li {
+  width: calc((100% - 1rem) / 2);
+  transition: 0.2s;
+}
+
+.pokelist > li:hover {
+  transform: scale(1.05);
+}
+
+.pokelist h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.pokelist h3 {
+  font-size: 0.75rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.pokelist article::after {
+  content: "";
+  width: 7rem;
+  height: 7rem;
+  background-image: url("pictogrammes/PokeBall_icon.svg");
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+}
+
+.typelist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.625rem;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.typelist li {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.75rem;
+  padding: 0.125rem 0.5rem;
+}
+
+.Plante {
+  background-color: #48d0b0;
+}
+
+.Feu {
+  background-color: #fb6c6c;
+}
+
+.Eau {
+  background-color: #76bdfe;
+}
+
+.Insecte {
+  background-color: #ffd86f;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+header button {
+  padding: 6px;
+  border: 0;
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+header ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("pictogrammes/PokeBall_icon_grey.svg");
+  width: 15rem;
+  height: 15rem;
+  top: -6.5rem;
+  right: -6.5rem;
+  z-index: -1;
+}
+
+.container {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 640px) {
+  img {
+    height: 90%;
+    object-fit: contain;
+  }
+
+  .pokelist > li {
+    width: calc((100% - 2rem) / 3);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .pokelist > li {
+    width: calc((100% - 2rem) / 3);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pokelist > li {
+    width: calc((100% - 2rem) / 3);
+  }
+}
